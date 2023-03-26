@@ -53,7 +53,7 @@ interface IWeb3AuthProps {
   chain: CHAIN_CONFIG_TYPE;
 }
 
-const clientId = "BKPxkCtfC9gZ5dj-eg-W6yb5Xfr3XkxHuGZl2o2Bn8gKQ7UYike9Dh6c-_LaXlUN77x0cBoPwcSx-IVm0llVsLA";
+const clientId = "BOTNpXm5I1O92zSd16awMaXVAO5j3wDOkCdCseVvn9JVBgu0jAeJevcAbSVvHbrNTSgSnt3zBQVe3P6lnbsyNs4";
 
 
 export const Web3AuthProvider: FunctionComponent<IWeb3AuthState> = ({ children, web3AuthNetwork, chain }: IWeb3AuthProps) => {

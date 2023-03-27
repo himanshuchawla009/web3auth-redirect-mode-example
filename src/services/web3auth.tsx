@@ -122,15 +122,12 @@ export const Web3AuthProvider: FunctionComponent<IWeb3AuthState> = ({ children, 
 
     // if user is logged in thn use the session redirect mode
     if (isLoggedIn()) {
-      debugger
       web3AuthInstance.configureAdapter(sessionAdapter)
       subscribeAuthEvents(web3AuthInstance)
-      // initialize async
       await web3AuthInstance.init();
     } else {
       // if user is not logged in use sessionless redirect mode for fast login
       // but at the same time initialize session in a async way
-      debugger
       web3AuthInstance.configureAdapter(sessionLessAdapter)
       subscribeAuthEvents(web3AuthInstance)
       await web3AuthInstance.init();
@@ -143,7 +140,7 @@ export const Web3AuthProvider: FunctionComponent<IWeb3AuthState> = ({ children, 
         web3AuthNetwork: "cyan"
       });
       web3AuthInstanceWithSession.configureAdapter(sessionAdapter)
-      // initialize async
+      // initialize async with blocking 
       web3AuthInstanceWithSession.init();
     }
     return web3AuthInstance
